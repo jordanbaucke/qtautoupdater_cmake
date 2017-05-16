@@ -1,0 +1,1 @@
+# qtautoupdater_cmake
