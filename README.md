@@ -1,11 +1,9 @@
-# qtautoupdater_cmake
+# Example using QtAutoUpdate w/ CMake
 
-### cmakified version of qtautoupdater: 
-
-- compiles for Qt 5.6.2
+## How to: 
+- Using Qt 5.6.2 / QtAutoUpdater 1.1.0
 - Download .lib files here: https://github.com/Skycoder42/QtAutoUpdater/releases/tag/1.1.0, find `QtAutoUpdater.lib` &  `QtAutoUpdaterController.lib` (in my case `QtAutoUpdater_precompiled\QtAutoUpdater\msvc64\release`) and copy them into the root of this directory.
 - If building for another OS use libraries created for their particular runtime and update `target_linked_libraries` in `CMakeLists.txt`, being sure to copy the correct files for debug/release
-
 
 ## Example build MSVC64, release
 ```
@@ -14,7 +12,8 @@ cmake -G "Visual Studio 14 2015 Win64" ..
 msbuild qtautoupdater-cmake.sln /p:Configuration=release
 ```
 
-- some API changes have been made to the "example" code I used in `main.cpp`, as such the example is modified from what is shown on original github article README:
+## main.cpp (the code invoking the library)
+some API changes have been made to the "example" code I used in `main.cpp`, as such the example is modified from what is shown on (original github)[https://github.com/Skycoder42/QtAutoUpdater] README:
 
 ```
 #include <QtCore/QCoreApplication>
@@ -45,3 +44,7 @@ int main(int argc, char *argv[])
 	return a.exec();
 }
 ```
+
+## To do:
+- Would like to create a `FindQtQutoUpdater.txt` (for CMake to find and install libraries)
+- Create CMakeText.txt to build and install various QtAutoUpdate libraries for different version of Qt
