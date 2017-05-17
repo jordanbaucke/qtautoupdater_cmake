@@ -13,7 +13,7 @@ msbuild qtautoupdater-cmake.sln /p:Configuration=release
 ```
 
 ## main.cpp (the code invoking the library)
-some API changes have been made to the "example" code I used in `main.cpp`, as such the example is modified from what is shown on (original github)[https://github.com/Skycoder42/QtAutoUpdater] README:
+some API changes have been made to the "example" code I used in `main.cpp`, as such the example is modified from what is shown on [QtAutoUpdate readme](https://github.com/Skycoder42/QtAutoUpdater) README:
 
 ```
 #include <QtCore/QCoreApplication>
@@ -47,4 +47,4 @@ int main(int argc, char *argv[])
 
 ## To do:
 - Would like to create a `FindQtQutoUpdater.txt` (for CMake to find and install libraries)
-- Create CMakeText.txt to build and install various QtAutoUpdate libraries for different version of Qt
+- Create CMakeText.txt to build and install various QtAutoUpdate libraries (from source) for different version of Qt and operating systems (I am a CMake novice so all I could do was link to pre-compiled binaries ;)
