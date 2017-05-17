@@ -1,7 +1,7 @@
 # Example using QtAutoUpdate w/ CMake
 
 ## How to: 
-- Using Qt 5.6.2 / QtAutoUpdater 1.1.0
+- Using Qt 5.6.2 / [QtAutoUpdater](https://github.com/Skycoder42/QtAutoUpdater) 1.1.0
 - Download .lib files here: https://github.com/Skycoder42/QtAutoUpdater/releases/tag/1.1.0, find `QtAutoUpdater.lib` &  `QtAutoUpdaterController.lib` (in my case `QtAutoUpdater_precompiled\QtAutoUpdater\msvc64\release`) and copy them into the root of this directory.
 - If building for another OS use libraries created for their particular runtime and update `target_linked_libraries` in `CMakeLists.txt`, being sure to copy the correct files for debug/release
 
