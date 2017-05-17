@@ -1,7 +1,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QDebug>
 #include <QtCore/QStandardPaths>
-#include <QtAutoUpdaterCore/updater.h>
+#include <updater.h>
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
 	QObject::connect(updater, &QtAutoUpdater::Updater::checkUpdatesDone, [updater](bool a, bool b){
 		qDebug() << "Has updates:" << a
 				 << "\nHas errors:" << b
-				 << "\nError string:" << updater->errorLog();
+				 // based on example on github but API has changed from 1.1.0 reverting
+				 << "\nError string:" << updater->getErrorLog();
 		qDebug() << updater->updateInfo();
 		qApp->quit();
 	});
